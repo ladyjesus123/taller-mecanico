@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal - Aplicación de Taller</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra de Navegación Superior -->
+    <header>
+        <div class="navbar">
+            <div class="logo">Taller Moto</div>
+            <div class="user-info">
+                <span>Hola, [Nombre del Usuario]</span>
+                <div class="profile-icon">&#x1F464;</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menú Lateral Izquierdo -->
+    <aside class="sidebar">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="vendedor.html">Inicio del modulo del vendedor</a></li>
+            <li><a href="perfil-vendedor.html">Perfil del Vendedor</a></li>
+            <li><a href="alertas-autorizaciones.html">Alertas de Autorizaciones</a></li>
+            <li><a href="envio-mensajes.html">Envío de Mensajes</a></li>
+            
+        </ul>
+    </aside>
+
+    <!-- Área de Contenido Principal -->
+    <main class="main-content">
+        <form class="edit-profile-form">
+            <label for="nombre">Nombre del Vendedor:</label>
+            <input type="text" id="nombre" name="nombre" value="Juan Pérez" required>
+
+            <label for="clientes-asignados">Clientes Asignados:</label>
+            <input type="number" id="clientes-asignados" name="clientes-asignados" value="5" required>
+
+            <label for="motos-asignadas">Motos Asignadas:</label>
+            <input type="number" id="motos-asignadas" name="motos-asignadas" value="7" required>
+
+            <label for="ordenes-abiertas">Órdenes de Trabajo Abiertas:</label>
+            <input type="number" id="ordenes-abiertas" name="ordenes-abiertas" value="3" required>
+
+            <label for="ordenes-cerradas">Órdenes de Trabajo Cerradas:</label>
+            <input type="number" id="ordenes-cerradas" name="ordenes-cerradas" value="10" required>
+
+            <button type="submit" class="save-changes-btn">Guardar Cambios</button>
+            <button type="button" class="cancel-btn" onclick="window.location.href='perfil-vendedor.html'">Cancelar</button>
+        </form>
+        <br><br>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2024 Taller Moto. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

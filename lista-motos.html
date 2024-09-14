@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal - Aplicación de Taller</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra de Navegación Superior -->
+    <header>
+        <div class="navbar">
+            <div class="logo">Taller Moto</div>
+            <div class="user-info">
+                <span>Hola, [Nombre del Usuario]</span>
+                <div class="profile-icon">&#x1F464;</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menú Lateral Izquierdo -->
+    <aside class="sidebar">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="unidades.html"> Inicio Modulo de Motos</a></li>
+            <li><a href="registro-moto.html">Registro de Moto</a></li>
+            <li><a href="busqueda-motos.html">Búsqueda de Motos</a></li>
+            <li><a href="modificar-moto.html">Modificación de Datos</a></li>
+            <li><a href="lista-motos.html">Lista de Motos</a></li>
+            
+        </ul>
+    </aside>
+
+    <!-- Área de Contenido Principal -->
+    <main class="main-content">
+        <h2>Lista de Motos</h2>
+        <div class="top-bar">
+            <button class="add-moto-btn" onclick="window.location.href='registro-moto.html'">Añadir Moto</button>
+            <input type="text" id="search-owner" placeholder="Buscar por Propietario" oninput="buscarMotosPorPropietario()">
+        </div>
+
+        <table class="moto-list-table">
+            <thead>
+                <tr>
+                    <th>Chasis</th>
+                    <th>Propietario</th>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Año</th>
+                    <th>Cilindraje</th>
+                    <th>Kilometraje</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="moto-list">
+                <!-- Las filas de motos se llenarán dinámicamente -->
+                <tr>
+                    <td>12345678</td>
+                    <td>Juan Pérez</td>
+                    <td>Yamaha</td>
+                    <td>YZF-R3</td>
+                    <td>2020</td>
+                    <td>300cc</td>
+                    <td>15000 km</td>
+                    <td>
+                        <button class="edit-btn" onclick="window.location.href='modificar-moto.html'">Editar</button>
+                        <button class="delete-btn" onclick="confirmarEliminarMoto()">Eliminar</button>
+                    </td>
+                </tr>
+                <!-- Más filas de ejemplo pueden añadirse aquí -->
+            </tbody>
+        </table>
+        <br>
+        <br>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2024 Taller Moto. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Función para buscar motos por nombre del propietario (a implementar)
+        function buscarMotosPorPropietario() {
+            // Código JavaScript para buscar motos y actualizar la tabla
+        }
+
+        // Función para confirmar la eliminación de una moto (a implementar)
+        function confirmarEliminarMoto() {
+            if (confirm('¿Estás seguro de que deseas eliminar esta moto?')) {
+                // Código JavaScript para eliminar la moto seleccionada
+            }
+        }
+    </script>
+</body>
+</html>

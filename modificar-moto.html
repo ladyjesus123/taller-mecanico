@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal - Aplicación de Taller</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra de Navegación Superior -->
+    <header>
+        <div class="navbar">
+            <div class="logo">Taller Moto</div>
+            <div class="user-info">
+                <span>Hola, [Nombre del Usuario]</span>
+                <div class="profile-icon">&#x1F464;</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menú Lateral Izquierdo -->
+    <aside class="sidebar">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="unidades.html"> Inicio Modulo de Motos</a></li>
+            <li><a href="registro-moto.html">Registro de Moto</a></li>
+            <li><a href="busqueda-motos.html">Búsqueda de Motos</a></li>
+            <li><a href="modificar-moto.html">Modificación de Datos</a></li>
+            <li><a href="lista-motos.html">Lista de Motos</a></li>
+            
+        </ul>
+    </aside>
+
+    <!-- Área de Contenido Principal -->
+    <main class="main-content">
+        <h2>Editar Información de la Moto</h2>
+        <form>
+            <label for="chasis">Chasis:</label>
+            <input type="text" id="chasis" name="chasis" required>
+
+            <label for="propietario">Propietario:</label>
+            <input type="text" id="propietario" name="propietario" required>
+
+            <label for="marca">Marca:</label>
+            <input type="text" id="marca" name="marca" required>
+
+            <label for="modelo">Modelo:</label>
+            <input type="text" id="modelo" name="modelo" required>
+
+            <label for="año">Año:</label>
+            <input type="number" id="año" name="año" required>
+
+            <label for="cilindraje">Cilindraje:</label>
+            <input type="text" id="cilindraje" name="cilindraje" required>
+
+            <label for="kilometraje">Kilometraje:</label>
+            <input type="number" id="kilometraje" name="kilometraje" required>
+
+            <label for="tipo">Tipo de Moto:</label>
+            <select id="tipo" name="tipo">
+                <option value="urbana">Urbana</option>
+                <option value="deportiva">Deportiva</option>
+                <option value="scooter">Scooter</option>
+                <option value="otro">Otro</option>
+            </select>
+
+            <button type="submit">Guardar Cambios</button>
+        </form>
+        <br>
+        <br>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2024 Taller Moto. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

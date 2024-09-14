@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal - Aplicación de Taller</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra de Navegación Superior -->
+    <header>
+        <div class="navbar">
+            <div class="logo">Taller Moto</div>
+            <div class="user-info">
+                <span>Hola, [Nombre del Usuario]</span>
+                <div class="profile-icon">&#x1F464;</div>
+            </div>
+        </div>
+    </header>
+    <!-- Menú Lateral Izquierdo -->
+    <aside class="sidebar">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="inspecciones.html">Modulo Inspeccion</a></li>
+            <li><a href="nueva-inspeccion.html">Nueva Inspección</a></li>
+            <li><a href="detalle-inspeccion.html">Detalles de Inspección</a></li>
+            
+        </ul>
+    </aside>
+
+    <!-- Área de Contenido Principal -->    
+    <main class="main-content">
+        <h2>Modulo de Inspecciones</h2>
+        <br><br>
+        <div class="inspecciones-container">
+            <h1>Lista de Inspecciones</h1>
+            <input type="text" class="search-input" placeholder="Buscar Inspección por número o datos de la moto">
+            <button class="add-button" onclick="window.location.href='nueva-inspeccion.html'">Nueva Inspección</button>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Número de Inspección</th>
+                        <th>Chasis</th>
+                        <th>Tipo de Servicio</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Ejemplo de Fila de Inspección -->
+                    <tr>
+                        <td>001</td>
+                        <td>XYZ123456</td>
+                        <td>Revisión General</td>
+                        <td>
+                            <button class="edit-button" onclick="editarInspeccion('001')">Editar</button>
+                            <button class="delete-button" onclick="confirmarEliminacion('001')">Eliminar</button>
+                        </td>
+                    </tr>
+                    <!-- Más filas aquí -->
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Modal de Confirmación de Eliminación -->
+        <div id="confirmDeleteModal" class="modal">
+            <div class="modal-content">
+                <p>¿Estás seguro de que deseas eliminar esta inspección?</p>
+                <button class="confirm-delete" onclick="eliminarInspeccion()">Sí, eliminar</button>
+                <button class="cancel-delete" onclick="cerrarModal()">Cancelar</button>
+            </div>
+        </div>
+        <br><br>
+        <br>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2024 Taller Moto. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        // JavaScript para manejar la edición y eliminación
+function editarInspeccion(numeroInspeccion) {
+    // Redirigir a la página de detalles de inspección para editar
+    window.location.href = `detalle-inspeccion.html?inspeccion=${numeroInspeccion}`;
+}
+
+function confirmarEliminacion(numeroInspeccion) {
+    // Mostrar modal de confirmación
+    document.getElementById('confirmDeleteModal').style.display = 'block';
+    // Guardar el número de inspección a eliminar en una variable global o en el estado
+    window.inspeccionParaEliminar = numeroInspeccion;
+}
+
+function eliminarInspeccion() {
+    // Lógica para eliminar la inspección
+    console.log("Inspección eliminada:", window.inspeccionParaEliminar);
+    // Actualizar la lista de inspecciones
+    cerrarModal();
+}
+
+function cerrarModal() {
+    document.getElementById('confirmDeleteModal').style.display = 'none';
+}
+
+    </script>
+</body>
+</html>

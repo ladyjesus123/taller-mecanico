@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal - Aplicación de Taller</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra de Navegación Superior -->
+    <header>
+        <div class="navbar">
+            <div class="logo">Taller Moto</div>
+            <div class="user-info">
+                <span>Hola, [Nombre del Usuario]</span>
+                <div class="profile-icon">&#x1F464;</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menú Lateral Izquierdo -->
+    <aside class="sidebar">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="vendedor.html">Inicio del modulo del vendedor</a></li>
+            <li><a href="perfil-vendedor.html">Perfil del Vendedor</a></li>
+            <li><a href="alertas-autorizaciones.html">Alertas de Autorizaciones</a></li>
+            <li><a href="envio-mensajes.html">Envío de Mensajes</a></li>
+            
+        </ul>
+    </aside>
+
+    <!-- Área de Contenido Principal -->
+    <main class="main-content">
+        <div class="profile-section">
+            <h2>Datos del Vendedor</h2>
+            <p><strong>Nombre del Vendedor:</strong> Juan Pérez</p>
+            <p><strong>Clientes Asignados:</strong> 5</p>
+            <p><strong>Motos Asignadas:</strong> 7</p>
+            <p><strong>Ordenes de Trabajo Abiertas:</strong> 3</p>
+            <p><strong>Ordenes de Trabajo Cerradas:</strong> 10</p>
+            <button class="edit-profile-btn" onclick="window.location.href='editar-perfil-vendedor.html'">Editar Perfil</button>
+        </div>
+        <br><br>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2024 Taller Moto. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal - Aplicación de Taller</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra de Navegación Superior -->
+    <header>
+        <div class="navbar">
+            <div class="logo">Taller Moto</div>
+            <div class="user-info">
+                <span>Hola, [Nombre del Usuario]</span>
+                <div class="profile-icon">&#x1F464;</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menú Lateral Izquierdo -->
+    <aside class="sidebar">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="inspecciones.html">Modulo Inspeccion</a></li>
+            <li><a href="nueva-inspeccion.html">Nueva Inspección</a></li>
+            <li><a href="detalle-inspeccion.html">Detalles de Inspección</a></li>
+            
+        </ul>
+    </aside>
+
+    <!-- Área de Contenido Principal -->
+    <main class="main-content">
+        <div class="detalle-container">
+            <h1>Detalles de Inspección</h1>
+            <form id="formEditarInspeccion">
+                <label for="numeroInspeccion">Número de Inspección:</label>
+                <input type="text" id="numeroInspeccion" value="001" readonly>
+        
+                <label for="chasis">Chasis:</label>
+                <input type="text" id="chasis" value="XYZ123456">
+        
+                <label for="tipoServicio">Tipo de Servicio:</label>
+                <input type="text" id="tipoServicio" value="Revisión General">
+        
+                <!-- Más campos para los checkboxes y observaciones -->
+        
+                <button type="submit" class="save-button">Guardar Cambios</button>
+                <button type="button" class="cancel-button" onclick="window.location.href='inspecciones.html'">Cancelar</button>
+            </form>
+        </div>
+        <br>
+        <br>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2024 Taller Moto. Todos los derechos reservados.</p>
+    </footer>
+    
+</body>
+</html>

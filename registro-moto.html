@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal - Aplicación de Taller</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra de Navegación Superior -->
+    <header>
+        <div class="navbar">
+            <div class="logo">Taller Moto</div>
+            <div class="user-info">
+                <span>Hola, [Nombre del Usuario]</span>
+                <div class="profile-icon">&#x1F464;</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menú Lateral Izquierdo -->
+    <aside class="sidebar">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="unidades.html"> Inicio Modulo de Motos</a></li>
+            <li><a href="registro-moto.html">Registro de Moto</a></li>
+            <li><a href="busqueda-motos.html">Búsqueda de Motos</a></li>
+            <li><a href="modificar-moto.html">Modificación de Datos</a></li>
+            <li><a href="lista-motos.html">Lista de Motos</a></li>
+            
+        </ul>
+    </aside>
+
+    <!-- Área de Contenido Principal -->
+    <main class="main-content">
+        <h2>Registro de la Moto</h2>
+        <form>
+            <label>Propietario:</label>
+            <input type="text" name="propietario" required>
+            <label>Fecha de Venta:</label>
+            <input type="date" name="fecha_venta" required>
+            <label>Número de Factura:</label>
+            <input type="text" name="numero_factura" required>
+            <label>Motor y Chasis:</label>
+            <input type="text" name="motor_chasis" required>
+            <label>Placa:</label>
+            <input type="text" name="placa" required>
+            <label>Marca:</label>
+            <input type="text" name="marca" required>
+            <label>Modelo:</label>
+            <input type="text" name="modelo" required>
+            <label>Año:</label>
+            <input type="number" name="ano" required>
+            <label>Cilindraje:</label>
+            <input type="text" name="cilindraje" required>
+            <label>Kilometraje:</label>
+            <input type="number" name="kilometraje" required>
+            <label>Tipo:</label>
+            <input type="text" name="tipo" required>
+            <label>Fotografías:</label>
+            <input type="file" name="fotos" multiple required>
+            <br><br>
+            <button type="submit">Registrar Moto</button>
+        </form>
+        <br>
+        <br>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2024 Taller Moto. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

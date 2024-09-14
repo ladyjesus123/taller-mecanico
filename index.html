@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal - Aplicación de Taller</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra de Navegación Superior -->
+    <header>
+        <div class="navbar">
+            <div class="logo">Taller Moto</div>
+            <div class="user-info">
+                <span>Hola, [Nombre del Usuario]</span>
+                <div class="profile-icon">&#x1F464;</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menú Lateral Izquierdo -->
+    <aside class="sidebar">
+        <ul>
+            <li><a href="unidades.html">Unidades</a></li>
+            <li><a href="vendedor.html">Vendedor</a></li>
+            <li><a href="inspecciones.html">Inspección</a></li>
+            <li><a href="clientes.html">Clientes</a></li>
+            <li><a href="ordenes-trabajo.html">Órdenes de Trabajo</a></li>
+            <li><a href="reportes.html">Reporte del Mecánico</a></li>
+            <li><a href="inventario.html">Inventario</a></li>
+            <li><a href="#ticket.html">Ticket de Costos</a></li>
+            <li><a href="#informes">Informes</a></li>
+        </ul>
+    </aside>
+
+    <!-- Área de Contenido Principal -->
+    <main class="main-content">
+        <section class="welcome">
+            <h1>¡Bienvenido al panel de control!</h1>
+            <p>Hola, [Nombre del Usuario].</p>
+        </section>
+
+        <section class="summary-cards">
+            <div class="card">Motos Registradas: <span>120</span></div>
+            <div class="card">Órdenes de Trabajo Abiertas: <span>15</span></div>
+            <div class="card">Clientes Registrados: <span>85</span></div>
+            <div class="card">Repuestos en Bajo Stock: <span>5</span></div>
+        </section>
+
+        <section class="quick-actions">
+            <button onclick="location.href='#registro-moto'">Registrar Nueva Moto</button>
+            <button onclick="location.href='#orden-trabajo'">Crear Nueva Orden de Trabajo</button>
+            <button onclick="location.href='#nuevo-cliente'">Registrar Nuevo Cliente</button>
+        </section>
+
+        <section class="charts">
+            <!-- Aquí puedes agregar gráficos usando librerías como Chart.js -->
+        </section>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2024 Taller Moto. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
+

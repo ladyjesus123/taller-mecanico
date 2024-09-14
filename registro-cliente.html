@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal - Aplicación de Taller</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra de Navegación Superior -->
+    <header>
+        <div class="navbar">
+            <div class="logo">Taller Moto</div>
+            <div class="user-info">
+                <span>Hola, [Nombre del Usuario]</span>
+                <div class="profile-icon">&#x1F464;</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menú Lateral Izquierdo -->
+    <aside class="sidebar">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="clientes.html">Inicio del Modulo de Clientes</a></li>
+                <li><a href="registro-cliente.html">Registro de Cliente</a></li>
+                <li><a href="busqueda-clientes.html">Búsqueda de Clientes</a></li>
+                <li><a href="modificacion-clientes.html">Modificación de Datos</a></li>
+            
+        </ul>
+    </aside>
+
+    <!-- Área de Contenido Principal -->
+    <main class="main-content">
+        <form>
+            <label>Nombre:</label>
+            <input type="text" name="nombre" required>
+            <label>Apellido:</label>
+            <input type="text" name="apellido" required>
+            <label>Teléfono:</label>
+            <input type="text" name="telefono" required>
+            <label>Correo Electrónico:</label>
+            <input type="email" name="email" required>
+            <button type="submit">Registrar Cliente</button>
+        </form>
+        <br><br>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2024 Taller Moto. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

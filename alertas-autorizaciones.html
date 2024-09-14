@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal - Aplicación de Taller</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra de Navegación Superior -->
+    <header>
+        <div class="navbar">
+            <div class="logo">Taller Moto</div>
+            <div class="user-info">
+                <span>Hola, [Nombre del Usuario]</span>
+                <div class="profile-icon">&#x1F464;</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menú Lateral Izquierdo -->
+    <aside class="sidebar">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="vendedor.html">Inicio del modulo del vendedor</a></li>
+            <li><a href="perfil-vendedor.html">Perfil del Vendedor</a></li>
+            <li><a href="alertas-autorizaciones.html">Alertas de Autorizaciones</a></li>
+            <li><a href="envio-mensajes.html">Envío de Mensajes</a></li>
+            
+        </ul>
+    </aside>
+
+    <!-- Área de Contenido Principal -->
+    <main class="main-content">
+        <div class="alertas-container">
+            <h2>Ordenes de Trabajo que Requieren Autorización</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Número de Orden</th>
+                        <th>Tipo de Autorización</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-autorizaciones">
+                    <!-- Ejemplo de una orden de trabajo que requiere autorización -->
+                    <tr id="orden1">
+                        <td>Orden de Trabajo #1</td>
+                        <td>Repuestos</td>
+                        <td><button onclick="autorizarTrabajo('orden1')">Autorizar</button></td>
+                    </tr>
+                    <tr id="orden2">
+                        <td>Orden de Trabajo #2</td>
+                        <td>Trabajo Extra</td>
+                        <td><button onclick="autorizarTrabajo('orden2')">Autorizar</button></td>
+                    </tr>
+                    <tr id="orden3">
+                        <td>Orden de Trabajo #3</td>
+                        <td>Repuestos</td>
+                        <td><button onclick="autorizarTrabajo('orden3')">Autorizar</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br><br>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2024 Taller Moto. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        function autorizarTrabajo(idOrden) {
+            const confirmation = confirm("¿Estás seguro de que deseas autorizar este trabajo?");
+            if (confirmation) {
+                alert("Trabajo autorizado con éxito.");
+                
+                // Eliminar la fila de la tabla de autorizaciones
+                const ordenRow = document.getElementById(idOrden);
+                if (ordenRow) {
+                    ordenRow.remove();
+                }
+
+                // Aquí puedes agregar el código adicional para actualizar el estado en la base de datos o sistema.
+            }
+        }
+    </script>
+</body>
+</html>
