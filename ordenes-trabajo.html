@@ -32,11 +32,58 @@
 
     <!-- Área de Contenido Principal -->
     <main class="main-content">
-        <form>
-            <label>Buscar por Número de Orden:</label>
-            <input type="text" name="buscar_orden" required>
-            <button type="submit">Buscar</button>
-        </form>
+        
+        <div class="ordenes-trabajo-container">
+            <h2>Órdenes de Trabajo</h2>
+            
+            <!-- Barra de búsqueda -->
+            <div class="search-bar">
+                <label for="search">Buscar Orden de Trabajo:</label>
+                <input type="text" id="search" placeholder="Buscar por número de inspección o datos de la moto...">
+                <button type="button" class="search-button">Buscar</button>
+            </div>
+    
+            <!-- Tabla de órdenes de trabajo -->
+            <table class="ordenes-table">
+                <thead>
+                    <tr>
+                        <th>Número de Inspección</th>
+                        <th>Datos Moto (Chasis)</th>
+                        <th>Servicio Requerido</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>ABC123456</td>
+                        <td>Servicio Menor</td>
+                        <td>En Proceso</td>
+                        <td>
+                            <button class="view-button" onclick="location.href='ver-detalles-orden.html'">Ver Detalles</button>
+                            <button class="edit-button" onclick="location.href='editar-orden.html'">Editar</button>
+                            <button class="delete-button">Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>XYZ987654</td>
+                        <td>Cambio de Aceite</td>
+                        <td>Finalizado</td>
+                        <td>
+                            <button class="view-button" onclick="location.href='ver-detalles-orden.html'">Ver Detalles</button>
+                            <button class="edit-button" onclick="location.href='editar-orden.html'">Editar</button>
+                            <button class="delete-button">Eliminar</button>
+                        </td>
+                    </tr>
+                    <!-- Más filas de órdenes -->
+                </tbody>
+            </table>
+    
+            <!-- Botón para agregar nueva orden -->
+            <button type="button" class="new-order-button" onclick="location.href='generar-orden-trabajo.html'">Nueva Orden de Trabajo</button>
+        </div>
     </main>
 
     <!-- Pie de Página -->

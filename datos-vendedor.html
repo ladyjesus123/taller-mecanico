@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal - Aplicación de Taller</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra de Navegación Superior -->
+    <header>
+        <div class="navbar">
+            <div class="logo">Taller Moto</div>
+            <div class="user-info">
+                <span>Hola, [Nombre del Usuario]</span>
+                <div class="profile-icon">&#x1F464;</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menú Lateral Izquierdo -->
+    <aside class="sidebar">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="vendedor.html">Inicio</a></li>
+            <li><a href="datos-vendedor.html">Datos del Vendedor</a></li>
+            <li><a href="ordenes-trabajo.html">Órdenes de Trabajo</a></li>
+            <li><a href="mensajes-fidelizacion.html">Mensajes de Fidelización</a></li>
+            
+        </ul>
+    </aside>
+
+    <!-- Área de Contenido Principal -->
+    <main class="main-content">
+        <div class="container">
+            <h1>Datos del Vendedor</h1>
+            
+            <!-- Datos del Vendedor -->
+            <section class="vendedor-info">
+                <h2>Información del Vendedor</h2>
+                <p><strong>Nombre:</strong> Juan Pérez</p>
+                <p><strong>ID de Vendedor:</strong> 12345</p>
+                <p><strong>Correo Electrónico:</strong> juan.perez@example.com</p>
+                <p><strong>Teléfono:</strong> +502 1234 5678</p>
+                <button class="edit-btn">Editar Perfil</button>
+            </section>
+    
+            <!-- Clientes Asignados -->
+            <section class="clientes-asignados">
+                <h2>Clientes Asignados</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre del Cliente</th>
+                            <th>Teléfono</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>María López</td>
+                            <td>+502 8765 4321</td>
+                        </tr>
+                        <!-- Más filas según los clientes asignados -->
+                    </tbody>
+                </table>
+            </section>
+    
+            <!-- Motos Asignadas -->
+            <section class="motos-asignadas">
+                <h2>Motos Asignadas</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Placa</th>
+                            <th>Marca</th>
+                            <th>Modelo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>XYZ123</td>
+                            <td>Kawasaki</td>
+                            <td>2022</td>
+                        </tr>
+                        <!-- Más filas según las motos asignadas -->
+                    </tbody>
+                </table>
+            </section>
+    
+            <!-- Órdenes de Trabajo -->
+            <section class="ordenes-trabajo-container">
+                <h2>Órdenes de Trabajo</h2>
+                <p><strong>Órdenes Abiertas:</strong> 5</p>
+                <p><strong>Órdenes Cerradas:</strong> 10</p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2024 Taller Moto. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal - Aplicación de Taller</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra de Navegación Superior -->
+    <header>
+        <div class="navbar">
+            <div class="logo">Taller Moto</div>
+            <div class="user-info">
+                <span>Hola, [Nombre del Usuario]</span>
+                <div class="profile-icon">&#x1F464;</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menú Lateral Izquierdo -->
+    <aside class="sidebar">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="vendedor.html">Inicio</a></li>
+            <li><a href="datos-vendedor.html">Datos del Vendedor</a></li>
+            <li><a href="ordenes-trabajo.html">Órdenes de Trabajo</a></li>
+            <li><a href="mensajes-fidelizacion.html">Mensajes de Fidelización</a></li>
+            
+        </ul>
+    </aside>
+
+    <!-- Área de Contenido Principal -->
+    <main class="main-content">
+        
+        <div class="editar-orden-container">
+            <h2>Editar Orden de Trabajo</h2>
+    
+            <form action="guardar-cambios-orden.html" method="post">
+                <!-- Número de Inspección (No editable) -->
+                <label for="numero-inspeccion">Número de Inspección:</label>
+                <input type="text" id="numero-inspeccion" name="numero-inspeccion" value="001" readonly>
+    
+                <!-- Datos Moto -->
+                <label for="datos-moto">Datos Moto (Chasis):</label>
+                <input type="text" id="datos-moto" name="datos-moto" value="ABC123456">
+    
+                <!-- Servicio Requerido -->
+                <label for="servicio-requerido">Servicio Requerido:</label>
+                <input type="text" id="servicio-requerido" name="servicio-requerido" value="Servicio Menor">
+    
+                <!-- Estado de la Orden -->
+                <label for="estado-orden">Estado de la Orden:</label>
+                <select id="estado-orden" name="estado-orden">
+                    <option value="En Proceso" selected>En Proceso</option>
+                    <option value="Finalizado">Finalizado</option>
+                </select>
+    
+                <!-- Observaciones -->
+                <label for="observaciones">Observaciones:</label>
+                <textarea id="observaciones" name="observaciones">Ninguna observación adicional.</textarea>
+    
+                <!-- Botones -->
+                <div class="form-buttons">
+                    <button type="submit" class="save-button">Guardar Cambios</button>
+                    <button type="button" class="cancel-button" onclick="location.href='ordenes-trabajo.html'">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2024 Taller Moto. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

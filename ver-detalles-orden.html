@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal - Aplicación de Taller</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra de Navegación Superior -->
+    <header>
+        <div class="navbar">
+            <div class="logo">Taller Moto</div>
+            <div class="user-info">
+                <span>Hola, [Nombre del Usuario]</span>
+                <div class="profile-icon">&#x1F464;</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menú Lateral Izquierdo -->
+    <aside class="sidebar">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="vendedor.html">Inicio</a></li>
+            <li><a href="datos-vendedor.html">Datos del Vendedor</a></li>
+            <li><a href="ordenes-trabajo.html">Órdenes de Trabajo</a></li>
+            <li><a href="mensajes-fidelizacion.html">Mensajes de Fidelización</a></li>
+            
+        </ul>
+    </aside>
+
+    <!-- Área de Contenido Principal -->
+    <main class="main-content">
+        <div class="detalles-orden-container">
+            <h2>Detalles de la Orden de Trabajo</h2>
+            
+            <!-- Detalles de la orden -->
+            <div class="orden-detalle">
+                <label>Número de Inspección:</label>
+                <span>001</span>
+            </div>
+    
+            <div class="orden-detalle">
+                <label>Datos Moto (Chasis):</label>
+                <span>ABC123456</span>
+            </div>
+    
+            <div class="orden-detalle">
+                <label>Servicio Requerido:</label>
+                <span>Servicio Menor</span>
+            </div>
+    
+            <div class="orden-detalle">
+                <label>Estado de la Orden:</label>
+                <span>En Proceso</span>
+            </div>
+    
+            <div class="orden-detalle">
+                <label>Fecha de Creación:</label>
+                <span>12/09/2024</span>
+            </div>
+    
+            <div class="orden-detalle">
+                <label>Observaciones:</label>
+                <span>Ninguna observación adicional.</span>
+            </div>
+    
+            <!-- Botón para regresar a la lista de órdenes -->
+            <button type="button" class="back-button" onclick="location.href='ordenes-trabajo.html'">Regresar a Órdenes de Trabajo</button>
+        </div>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2024 Taller Moto. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal - Aplicación de Taller</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra de Navegación Superior -->
+    <header>
+        <div class="navbar">
+            <div class="logo">Taller Moto</div>
+            <div class="user-info">
+                <span>Hola, [Nombre del Usuario]</span>
+                <div class="profile-icon">&#x1F464;</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menú Lateral Izquierdo -->
+    <aside class="sidebar">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="vendedor.html">Inicio</a></li>
+            <li><a href="datos-vendedor.html">Datos del Vendedor</a></li>
+            <li><a href="ordenes-trabajo.html">Órdenes de Trabajo</a></li>
+            <li><a href="mensajes-fidelizacion.html">Mensajes de Fidelización</a></li>
+            
+        </ul>
+    </aside>
+
+    <!-- Área de Contenido Principal -->
+    <main class="main-content">
+        
+        <div class="container">
+            <h1>Mensajes de Fidelización</h1>
+            
+            <div class="search-section">
+                <label for="search">Buscar Cliente:</label>
+                <input type="text" id="search" placeholder="Ingrese nombre o número de cliente">
+            </div>
+    
+            <table class="client-list">
+                <thead>
+                    <tr>
+                        <th>Nombre del Cliente</th>
+                        <th>Teléfono</th>
+                        <th>Moto</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Ejemplo de una fila, los datos pueden generarse dinámicamente -->
+                    <tr>
+                        <td>Juan Pérez</td>
+                        <td>+502 1234 5678</td>
+                        <td>Kawasaki 2022</td>
+                        <td><button class="whatsapp-btn" onclick="enviarMensaje('+50212345678')">Enviar Mensaje por WhatsApp</button></td>
+                    </tr>
+                    <tr>
+                        <td>María López</td>
+                        <td>+502 8765 4321</td>
+                        <td>Honda 2021</td>
+                        <td><button class="whatsapp-btn" onclick="enviarMensaje('+50287654321')">Enviar Mensaje por WhatsApp</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    
+    </main>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2024 Taller Moto. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        function enviarMensaje(telefono) {
+            const mensaje = "¡Gracias por confiar en nosotros! Recuerde su próximo servicio de mantenimiento.";
+            const whatsappUrl = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
